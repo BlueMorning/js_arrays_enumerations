@@ -24,9 +24,11 @@ const arrayTasks = {
     return arr;
 	},
 
-	// square: function (arr) {
-
-	// },
+	square: function (arr) {
+     return arr.map(function(value){
+        return value**2;
+     })
+	},
 
 	// sum: function (arr) {
 
