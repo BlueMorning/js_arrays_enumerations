@@ -30,9 +30,11 @@ const arrayTasks = {
      })
 	},
 
-	// sum: function (arr) {
-
-	// },
+	sum: function (arr) {
+    return arr.reduce(function(accumulator, value){
+        return accumulator += value;
+    })
+	},
 
 	// removeAndClone: function (arr, valueToRemove) {
 
