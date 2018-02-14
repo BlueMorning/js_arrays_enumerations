@@ -52,9 +52,15 @@ const arrayTasks = {
     return arrayOfIndexes;
 	},
 
-	// sumOfAllEvenNumbersSquared: function (arr) {
-
-	// }
+	sumOfAllEvenNumbersSquared: function (arr) {
+    return arr.filter(function(value){
+      return value%2 === 0;
+    }).map(function(value){
+      return value**2
+    }).reduce(function(accumulator, value){
+      return accumulator+value
+    });
+	}
 
 	// ----------- EXTENSION ------------
 
