@@ -15,9 +15,14 @@ const arrayTasks = {
     }
 	},
 
-	// insertAt: function (arr, itemToAdd, index) {
+	insertAt: function (arr, itemToAdd, index) {
+    if(index <= -arr.length){
+      index = 0;
+    }
 
-	// },
+    arr.splice(index, 0, itemToAdd);
+    return arr;
+	},
 
 	// square: function (arr) {
 
