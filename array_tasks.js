@@ -60,13 +60,26 @@ const arrayTasks = {
     }).reduce(function(accumulator, value){
       return accumulator+value
     });
-	}
+	},
 
 	// ----------- EXTENSION ------------
 
-	// findDuplicates: function (arr) {
+	findDuplicates: function (arr) {
 
-	// },
+    const duplicateValues = [];
+    let index            = 0;
+
+    while(index < arr.length){
+      if(arrayTasks.findIndexesOf(arr, arr[index]).length > 1){
+        duplicateValues.push(arr[index]);
+        arr   = arrayTasks.removeAndClone(arr, arr[index]);
+        index = 0;
+      }
+      index++;
+    }
+
+    return duplicateValues;
+	},
 
 }
 
